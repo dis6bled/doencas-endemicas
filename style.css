@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  background: linear-gradient(180.0deg, #068671 16.62%, #026151 85.61%);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Padrão */
+}
+
+.conteudo {
+  margin-bottom: 48px;
+  border-top: 0.4px solid #FFF2E7;
+}
+
+.conteudo-principal {
+  display: flex;
+  margin-top: 190px;
+  /*margin-left: 50px;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: 'Righteous', cursive;
+  text-shadow: 3px 3px 90px #0000006b;
+  font-weight: 400;
+  font-size: 80px;
+  color: #FFF2E7;
+}
+
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Sarala', sans-serif;
+  text-shadow: 3px 3px 70px #0000006b;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ECD6C4;
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 190px;
+}
+
+.conteudo-secundario-titulo {
+  border-top: 1.8px dashed #FFF2E7;
+  padding-top: 56px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFF2EF;
+  margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ECD6C4;
+}
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #444;*/
+}
+
+.card, .card2 {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  width: 360px; /* Largura dos cards */
+  margin: 0 20px; /* Margem uniforme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background-image: linear-gradient(#045749, #045749);
+  transition: all .5s;
+}
+
+.desc {
+  font-size: 16px;
+}
+
+.temaTexto {
+  font-size: 20px;
+  text-shadow: 3px 5px 10px #0000004d;
+}
+
+.card .img {
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-image: url('./assets/dengue.jpg');
+  background-size: 500px;
+  background-position: center;
+  transition: all .5s;
+  z-index: 2;
+  position: relative;
+  opacity: .8;
+  /*filter: blur(2px);*/
+}
+
+.card2 .img {
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-image: url('./assets/rato.jpg');
+  background-size: 500px;
+  background-position: center;
+  transition: all .5s;
+  z-index: 2;
+  position: relative;
+  opacity: .8;
+}
+
+.card:hover .img, .card2:hover .img {
+  transition: all .5s;
+  width: 430px;
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.card .content, .card2 .content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0px 30px;
+  height: 0;
+  opacity: 0;
+  transition: all .5s;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translateY(30px);
+}
+
+.buttonLM {
+  min-height: 10vh;
+  display: flex;
+  padding: 0px 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.lermais {
+  direction: none;
+  width: 215px;
+  height: 38px;
+  border-radius: 12px;
+  margin-top: 12px;
+  border: none;
+  margin-bottom: 20px;
+  transition: all .3s;
+  box-shadow: 0px 7px 1px #00000042;
+}
+
+.lermais:active {
+  transition: all .3s;
+  box-shadow: 0px 0px 1px #00000042;
+  background-color:#068671;
+}
+
+.card:hover .content, .card2:hover .content {
+  height: 320px;
+  padding: 20px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card .content p, .card2 .content p {
+  margin: 0;
+}
+
+.card .content .title, .card2 .content .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card .content .desc, .card2 .content .desc {
+  font-size: 16px;
+  font-weight: 100;
+  opacity: .8;
+  margin-top: 8px;
+}
+
+.card .arrow, .card2 .arrow {
+  padding: 15px;
+  transform: rotate(-180deg);
+  transition: all .5s;
+}
+
+.card:hover .arrow, .card2:hover .arrow {
+  transform: rotate(0);
+}
+
+.card .arrow span, .card2 .arrow span {
+  font-size: 24px;
+}
+
+
+@media (max-width: 450px) {
+
+  .conteudo-principal-escrito-titulo {
+    display: flex;
+    transform: scale(0.9);
+    font-size: 40px; /* Ajuste para tamanhos menores de tela */
+  }
+  
+  .conteudo-principal-escrito-subtitulo {
+    font-size: 16px; /* Ajuste para tamanhos menores de tela */
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+
+  .body {
+    overflow-x: hidden;
+  }
+  
+  .card, .card2 {
+    width: calc(100% - 40px); /* Reduz a largura para telas menores */
+    margin-bottom: 20px; /* Ajusta a margem inferior entre os cards */
+  }
+  
+  .card .img, .card2 .img {
+    height: 170px; /* Reduz a altura da imagem para telas menores */
+    width: 400px;
+  }
+  
+  .card .content, .card2 .content {
+    padding: 10px; /* Ajusta o espaçamento interno do conteúdo */
+  }
+
+  .card .content .title, .card2 .content .title {
+    font-size: 16px; /* Ajusta o tamanho do título para telas menores */
+  }
+  
+  .card .content .desc, .card2 .content .desc {
+    font-size: 16px; /* Ajusta o tamanho do texto do card para telas menores */
+  }
+
+  .conteudo-secundario {
+    gap: 0px;
+    margin-top: 100px;
+  }
+  
+  .conteudo-secundario-titulo {
+    font-size: 16px; /* Ajusta o tamanho do título do conteúdo secundário para telas menores */
+  }
+  
+  .conteudo-secundario-paragrafo {
+    font-size: 14px; /* Ajusta o tamanho do parágrafo do conteúdo secundário para telas menores */
+    margin: 5px;
+    text-align: center;
+  }
+
+  .card {
+    flex-direction: column; /* Altera para coluna para empilhar os cards */
+  }
+
+  .buttonLM {
+    display: flex;
+    padding: 0px 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lermais {
+    display: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    transition: all .3s;
+  }
+
+  .lermais:active::after {
+    transition: all .3s;
+    box-shadow: 0px 0px 1px #00000042;
+    background-color:#068671;
+  }
+}
+
+@media (max-height: 685px) {
+  .lermais {
+    margin-bottom: 20px;
+  }
+}
